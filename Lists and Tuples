@@ -1,0 +1,43 @@
+# introtopython.org
+# List and Tuples
+
+students = ['john', 'aaron', 'william', 'yan']
+
+for i in students:
+    print('Hello, '+ i.title() + '!')
+
+students = ['john', 'aaron', 'william', 'yan']
+i = students[0]
+print(i.title())
+
+languages = ['python', 'c', 'java']
+language0 = languages[0]
+language1 = languages[1]
+language2 = languages[2]
+print(language0.title())
+print(language1.title())
+print(language2.title())
+
+print('A nice programming language is',languages[0].title())
+print('A better programming language is',languages[1].title())
+print('An awesome programming language is',languages[2].title())
+
+# Index + 1 because python lists start from 0
+
+dogs = ['border collie', 'australian cattle dog', 'labrador retriever']
+for index, dog in enumerate(dogs):
+    place = str(index + 1)
+    print("Place: " + place, '\t', "Dog:" + dog.title())
+
+list_new =['shark', 'snake', 'wolf', 'cow', 'dog', 'bird', 'cat']
+for index in list_new:
+    print(index.title(), end=' ')
+
+first_neat_list = ['shark', 'snake', 'wolf', 'cow', 'dog', 'bird', 'cat']
+for index in first_neat_list:
+    print('That animal is a', index,'!')
+
+
+
+
+
