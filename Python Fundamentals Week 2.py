@@ -72,4 +72,86 @@ for row in raw_scores:
         print('{:.0f}%'.format((mark/30)*100), end=', ')
         time.sleep(0.02)
     print()
+list_of_strings = ["apple", 'banana', 'cherry', 'date']*3
+counter = 0
+for i in list_of_strings:
+    print((counter), i.title(), sep='\t\t')
+    counter += 1
+# We put counter at the bottom because we want the first index to equal 0
+# See below for counter before print statement - first index is labelled 1 even though it is 0
+
+
+list_of_strings = ["apple", 'banana', 'cherry', 'date']*3
+counter = 0
+for i in list_of_strings:
+    counter += 1
+    print((counter), i.title(), sep='\t\t')
+
+#  Enumerate method
+# This function takes in your collection and then during the 'for' loop
+# returns both a counter and one element at a time from your collection
+
+list_of_strings = ["apple", 'banana', 'cherry', 'date']
+for counter, element in enumerate(list_of_strings):
+    print(counter, element.title(), sep='. ')
+
+# Instead of a counter, it is common to see people using just the letter 'c'. Then when you want to report
+# something every tenth or thousandth time the loop runs you would insert in your code:
+
+# if c%1000 == 0:
+#     print('Line %s' % c)
+
+list_of_strings = ["apple", 'banana', 'cherry', 'date']
+for counter, element in enumerate(list_of_strings):
+    if counter %2 == 0:
+        print(counter, element.title(), sep='. ')
+
+
+# Iterating Dictionaries
+# how iteration works with key:value pairs or 'items'
+
+ingredients = {'salt':'parmesean',
+               'fat':'olive oil',
+               'acid':'vinegar',
+               'heat':'toast'
+               }
+# method here is - quality:food - helps understand for loop names below
+print(ingredients.items(), end='\n\n')
+for quality, food in ingredients.items():
+    print(quality, food, sep='--->')
+
+# methods of dictionary print below:
+
+food_dict = {'fish':'salmon',
+             'mushroom':'enoki',
+             'fruit':'apple',
+             'vegetable':'potato'
+             }
+for key in food_dict.keys():
+    print(key)
+
+for value in food_dict.values():
+    print(value)
+
+for item in food_dict.items():
+    print(item)
+
+# Notice in the print here you get what looks like a list - this is called a Tuple
+# Tuple is a list except its immutable (can't change it) and has parenthesis '()' instead of brackets '[]'
+
+# So with a list you could go my_list[2] = 'normal' and it would replace third index with normal.
+# with a tuple you cannot, you can query it with my_tuple[2]
+
+my_list = ['ant', 'ladybug', 'beetle']
+print(my_list[2])
+my_list[2] = 'grasshopper'
+print(my_list[2])
+
+my_tuple = ('ant', 'ladybug', 'beetle')
+print(my_tuple[2])
+# my_tuple[2] = 'grasshopper'
+# print(my_tuple[2])
+
+# commented out to remove error in run window
+    
 
