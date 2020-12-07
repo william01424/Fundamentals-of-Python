@@ -153,5 +153,63 @@ print(my_tuple[2])
 # print(my_tuple[2])
 
 # commented out to remove error in run window
-    
+# notice how here square brackets still applies when printing indexes of a tuple.
+
+# Iterating a table of values
+
+for row in range(5):
+    for column in range(5):
+        print(row, end=' ')
+    print()
+
+for row in range(5):
+    for column in range(5):
+        print(column, end=' ')
+    print('\n')
+
+for row in range(5):
+    for col in range(5):
+        print(row+col, end=' ')
+    print()
+
+for row in range(10):
+    for col in range(10):
+        if (row+col)%2==0:
+            print('x', end=' ')
+        else:
+            print('o', end=' ')
+    print()
+
+word = "point"
+for i in range(len(word)):
+        print(word[:i+1], sep='')
+
+word = "point"
+for i in range(len(word)):
+    print(word[i:], sep='')
+
+
+
+word = "point"
+for i in range(len(word)):
+    print(word[i:], word[:i], sep='')
+
+
+# CLARIFYING CONTINUE, PASS AND BREAK
+
+for j in range(10):
+    if j <=5:
+        print(j)
+    else:
+        break
+    print('Hello')
+
+for j in range(10):
+    if j<5:
+        print(j)
+    else:
+        pass
+    print('Higher')
+
+
 
