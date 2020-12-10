@@ -210,6 +210,42 @@ for j in range(10):
     else:
         pass
     print('Higher')
+    
+
+# print("Leave by throwing an error")
+#
+# for a in range(0, 100, 25):
+#     print(f"Value: {a}\t value / (value-75): {a/(a-75)}")
+#
+# print("Hi, it's the end!")
+
+
+# Breaking inner loop vs breaking outer loop
+
+print("Now with a break statement", end="\n\n")
+for i in range(5):
+    for j in range(100,105):
+        if j%3 == 0:
+            break
+        print(f"outer loop {i}: inner loop {j}")
+    print()
+
+print("Now with a break statement", end="\n\n")
+for i in range(5):
+    for j in range(100,105):
+        if i%3 == 0:
+            break
+        print(f"outer loop {i}: inner loop {j}")
+    print()
+# continue - goes to next element in them loop, break will stop the loop
+
+print("Now with a break statement", end="\n\n")
+for i in range(5):
+    for j in range(100,105):
+        if j%3 == 0:
+            continue
+        print(f"outer loop {i}: inner loop {j}")
+    print()
 
 
 
