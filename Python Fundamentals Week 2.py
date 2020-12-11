@@ -248,4 +248,109 @@ for i in range(5):
     print()
 
 
+# Conditionals and more loops
+
+x = 4
+y = 5
+z = 5
+
+print(x == y)
+print(y == z)
+print(x == z)
+
+print(not(x == y))
+ex_list = [1,3,5]
+print(z in ex_list)
+
+x = 5
+y = 3
+z = x + y
+
+if z == 7:
+    print("Yes, Z equals 7.")
+else:
+    print("My maths is not good today :(")
+
+# Introducing nested statements with elif which is a contraction of else if
+
+x = 5
+y = 5
+z = x + y
+
+if z == 10:
+    print("Hmm... should this be? ")
+elif z == 7:
+    print("Okay, I was worried for a second there.")
+else:
+    print("I give up.")
+
+
+# 0 is false, 1 is true, other numbers are nor true or false
+
+# when importing libraries - you can see the statement below to "import as" which makes it so you dont have
+# to write the full word out. e.g. rather than import numpy --- you can import numpy as np
+# VERY COMMON
+
+food_list = ["apple", 'banana', 'chocolate', 'dumpling']
+
+counter = 0
+for i in food_list:
+    print('Food number', counter, "is", i)
+    counter += 1
+
+print()
+# Shows how to enumerate to do something every nth time.
+for c, i in enumerate(food_list):
+    print("Food number", c, "is", i)
+
+# Shows building a new changed string and then printing the edited string
+
+example_str = "Print every third character of this line as upper case"
+outstr = ""
+
+for c, i in enumerate(example_str):
+    if c%3 == 0:
+        outstr += i.upper()
+    else:
+        outstr += i
+print(outstr)
+
+example_str = "Print every third character of this line as upper case"
+newstr = "asdasdasdasdada -----"
+
+for c,i in enumerate(example_str):
+    if c%3 == 0:
+        newstr += i.upper()
+    else:
+        newstr += i
+
+print(newstr)
+
+for i in range(100):
+    if i%25 == 0:
+        print(i)
+
+# List Comprehensions
+
+
+# This is an example of a normal 'non-pythonic' method
+my_list = ["allspice", "basil", "cumin"]
+
+new_list = []
+for i in my_list:
+    i = i.upper()
+    new_list.append(i)
+
+print(new_list)
+
+# List comp method:
+
+my_list = ["allspice", "basil", "cumin"]
+new_list = [i.upper() for i in my_list]
+print(new_list)
+
+my_list = ["allspice", "basil", "cumin"]
+new_list = [i.upper()*2 for i in my_list]
+print(new_list)
+
 
