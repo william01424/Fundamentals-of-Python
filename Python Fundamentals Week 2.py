@@ -354,3 +354,36 @@ new_list = [i.upper()*2 for i in my_list]
 print(new_list)
 
 
+# Slightly more advanced list comprehension
+
+my_list = ["allspice", "basil", "cumin"]
+new_list = []
+for i in my_list:
+    if len(i) == 5:
+        i = i.title()
+        new_list.append(i)
+print(new_list)
+
+new_list = [i.title() for i in my_list if len(i) == 5]
+print(new_list)
+
+# Dictionary Comprehensions
+
+my_dict = {1:'allspice', 2:'Basil', 3:'cumin'}
+
+new_dict = {key: value.title() for key, value in my_dict.items() if len(value) == 5}
+print(new_dict)
+
+import random as rd
+
+print(rd.randint(0,10))
+
+x = True
+
+while x:
+    random_number = rd.randint(0, 50)
+    print(random_number)
+
+    if random_number == 1:              # DON'T COMMENT THIS OUT OR YOU GET INFINITE LOOP!!
+        x = False
+
